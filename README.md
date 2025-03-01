@@ -112,5 +112,5 @@ This project is open-source and licensed under the **MIT License**.
 ---
 
 ### **Author**
-Developed by **Thineth Shehara Nayanananda**, passionate about creating efficient and user-friendly web applications.
+Developed by **Thineth Shehara Nayanananda**, A web application developer.
 
