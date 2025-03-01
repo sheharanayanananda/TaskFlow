@@ -24,10 +24,10 @@
         <div class="seperator"></div>
 
         <div class="tabs">
-            <a href="" class="home"><i class="fi fi-rr-house-blank"></i>Home</a>
-            <a href="" class="home"><i class="fi fi-rr-notes"></i>Tasks</a>
-            <a href="" class="home"><i class="fi fi-rr-calendar-clock"></i>Schedule</a>
-            <a href="" class="home"><i class="fi fi-rr-settings"></i>Settings</a>
+            <a href="{{ url('/home') }}"><i class="fi fi-rr-house-blank"></i>Home</a>
+            <a href="{{ url('/tasks') }}"><i class="fi fi-rr-notes"></i>Tasks</a>
+            <a href=""><i class="fi fi-rr-calendar-clock"></i>Schedule</a>
+            <a href=""><i class="fi fi-rr-settings"></i>Settings</a>
         </div>
 
         <div class="seperator"></div>
