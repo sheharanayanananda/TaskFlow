@@ -41,14 +41,19 @@
         </div>
     </nav>
 
-    <section class="task-manager">
+    <section class="tasks">
         <header>
-            <h1>Task Manager</h1>
-            <div class="today">
-                <p class="time"></p>>
-                <p class="date"></p>
-                <p class="temp"></p>
+            <div class="nowsec" id="nowsec">
+                <p><i class="fi fi-rr-temperature-high"></i></p>
+                <span id="temp"></span>
+
+                <p class="advice" id="advice"></p>
             </div>
+            <div class="search">
+                <input type="text" placeholder="Search Here">
+                <button><i class="fi fi-rr-search"></i></button>
+            </div>
+            <button class="create"><i class="fi fi-br-plus"></i>Create</button>
         </header>
     </section>
 </body>

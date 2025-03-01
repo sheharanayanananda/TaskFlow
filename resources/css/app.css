@@ -14,9 +14,9 @@
 /* Global Styles */
 @layer base {
     * {
-        @apply 
-            p-0 m-0 
-            box-border text-[var(--primary)] 
+        @apply
+            p-0 m-0
+            box-border text-[var(--primary)]
             no-underline list-none scroll-smooth
             transition-all ease-in-out duration-500;
         font-family: var(--poppins);
@@ -46,19 +46,19 @@
 
 /* Welcome Page Styles */
 .welcome {
-    @apply 
-        h-screen w-screen 
+    @apply
+        h-screen w-screen
         flex flex-col
-        justify-center items-center 
+        justify-center items-center
         bg-[url('/public/images/background.png')] bg-center bg-cover bg-fixed bg-[var(--bg)]
         transition-all ease-in-out duration-500;
 }
 
 .welcome .container {
-    @apply 
+    @apply
         w-screen h-screen
-        flex flex-col 
-        justify-center items-center 
+        flex flex-col
+        justify-center items-center
         bg-[radial-gradient(ellipse_at_center,var(--bg)_20%,#ebfff3c7_50%,#ebfff354_80%)]
         transition-all ease-in-out duration-500;
 }
@@ -87,45 +87,45 @@
 }
 
 .welcome .buttons a {
-    @apply 
-        px-5 py-2 
-        text-lg font-semibold 
+    @apply
+        px-5 py-2
+        text-lg font-semibold
         transition-all ease-in-out duration-500;
 }
 
 /* First Button */
 .welcome .buttons a:nth-child(1) {
-    @apply 
-        text-[var(--bg)] 
-        bg-[var(--primary)] 
-        border-[3px] border-[var(--primary)] rounded-l-[50px] rounded-tr-[15px] rounded-br-[15px] 
+    @apply
+        text-[var(--bg)]
+        bg-[var(--primary)]
+        border-[3px] border-[var(--primary)] rounded-l-[50px] rounded-tr-[15px] rounded-br-[15px]
         transition-all ease-in-out duration-500;
 }
 
 .welcome .buttons a:nth-child(1):hover {
-    @apply 
-        text-[var(--primary)] 
+    @apply
+        text-[var(--primary)]
         bg-[var(--bg)];
 }
 
 /* Second Button */
 .welcome .buttons a:nth-child(2) {
-    @apply 
-        text-[var(--primary)] 
-        bg-[var(--bg)] 
-        border-[3px] border-[var(--primary)] rounded-r-[50px] rounded-tl-[15px] rounded-bl-[15px] 
+    @apply
+        text-[var(--primary)]
+        bg-[var(--bg)]
+        border-[3px] border-[var(--primary)] rounded-r-[50px] rounded-tl-[15px] rounded-bl-[15px]
         transition-all ease-in-out duration-500;
 }
 
 .welcome .buttons a:nth-child(2):hover {
-    @apply 
-        text-[var(--bg)] 
+    @apply
+        text-[var(--bg)]
         bg-[var(--primary)];
 }
 
 /* Sidebar Styles */
 .sidebar {
-    @apply 
+    @apply
         fixed top-[20px] left-[20px]
         h-[calc(100vh-40px)] w-[250px]
         bg-[var(--primary)] rounded-[30px]
@@ -135,7 +135,7 @@
 }
 
 .sidebar .header {
-    @apply 
+    @apply
         w-full h-[60px]
         relative flex items-center justify-center
         mb-[40px]
@@ -143,7 +143,7 @@
 }
 
 .sidebar .logo {
-    @apply 
+    @apply
         text-[2.3rem] text-[var(--bh)] font-[500]
         mt-[50px]
         transition-all ease-in-out duration-500;
@@ -151,7 +151,7 @@
 }
 
 .sidebar .logo span {
-    @apply 
+    @apply
         text-[#fff]
         transition-all ease-in-out duration-500;
     font-family: var(--borel);
@@ -159,7 +159,7 @@
 
 .sidebar .seperator {
     @apply
-        flex 
+        flex
         w-full h-[2px]
         bg-[#ffffff2c]
         my-[30px]
@@ -167,14 +167,14 @@
 }
 
 .sidebar .tabs {
-    @apply 
+    @apply
         flex flex-col gap-[20px]
         transition-all ease-in-out duration-500;
 }
 
 .sidebar .tabs a {
     @apply
-        flex items-center justify-start 
+        flex items-center justify-start
         text-[1rem] font-[500] text-[#fff]
         px-[17px] bg-[var(--gray)]
         h-[55px]
@@ -183,21 +183,21 @@
 }
 
 .sidebar .tabs a i {
-    @apply 
+    @apply
         text-[1.2rem] text-[#fff]
         mr-[15px] mt-2
         transition-all ease-in-out duration-500;
 }
 
 .sidebar .tabs a:hover {
-    @apply 
+    @apply
         border-[var(--hover)]
         transform translate-y-[-5px] translate-z-[10px];
 }
 
 .sidebar .user {
-    @apply 
-        absolute flex items-center justify-between 
+    @apply
+        absolute flex items-center justify-between
         text-[1rem] font-[500]
         px-[15px] py-[10px] bg-[var(--gray)]
         bottom-5 left-5 right-5
@@ -206,48 +206,48 @@
 }
 
 .sidebar .user:hover {
-    @apply 
+    @apply
         border-[var(--hover)]
         transform translate-y-[-5px] translate-z-[10px];
 }
 
 .sidebar .user h2 {
-    @apply 
+    @apply
         text-[#fff]
         transition-all ease-in-out duration-500;
 }
 
 .sidebar .user p {
-    @apply 
+    @apply
         text-[#fff]
         transition-all ease-in-out duration-500;
-} 
+}
 
 .sidebar .user a i {
-    @apply 
+    @apply
         text-[#fff]
         transition-all ease-in-out duration-500;
 }
 
 .sidebar .user h2 {
-    @apply 
+    @apply
         text-[1rem]
         transition-all ease-in-out duration-500;
 }
 
 .sidebar .user p {
-    @apply 
+    @apply
         text-[0.7rem]
         transition-all ease-in-out duration-500;
 }
 
 .sidebar .user a i {
-    @apply 
+    @apply
         transition-all ease-in-out duration-500;
 }
 
 .sidebar .user a {
-    @apply 
+    @apply
         text-[1.2rem] mt-2
         transition-all ease-in-out duration-500;
 }
@@ -257,7 +257,7 @@
 }
 
 /*Header Styles */
-header {
+.dashboard header {
     @apply
         h-fit w-full py-2.5 px-2.5 pl-7
         bg-white shadow-[0_5px_15px_0_rgba(0,0,0,0.20)]
@@ -267,47 +267,47 @@ header {
         transition-all duration-500 ease-in-out;
 }
 
-header .greeting {
-    @apply 
+.dashboard header .greeting {
+    @apply
         text-[1.6rem] text-[var(--primary)] font-[500]
         transition-all ease-in-out duration-500;
 }
 
-header .search {
-    @apply 
+.dashboard header .search {
+    @apply
         flex items-center justify-center gap-2.5
         w-fit h-fit
         transition-all ease-in-out duration-500;
 }
 
-header .search input {
-    @apply 
-        w-[350px] h-[50px] px-[20px] 
+.dashboard header .search input {
+    @apply
+        w-[350px] h-[50px] px-[20px]
         bg-gray-50 text-[var(--primary)]
         border border-gray-200 rounded-full
         transition-all ease-in-out duration-500;
 }
 
-header .search input:focus {
-    @apply 
-        bg-white 
-        rounded-[30px] 
+.dashboard header .search input:focus {
+    @apply
+        bg-white
+        rounded-[30px]
         shadow-[0_3px_5px_0_rgba(0,0,0,0.1)]
         translate-z-0
         transition-all duration-500 ease-in-out
         outline-none;
 }
 
-header .search input::placeholder {
-    @apply 
+.dashboard header .search input::placeholder {
+    @apply
         text-gray-400
         transition-all ease-in-out duration-500;
 }
 
-header .search i {
-    @apply 
+.dashboard header .search i {
+    @apply
         flex items-center justify-center text-[1.1rem]
-        h-[50px] w-[50px] 
+        h-[50px] w-[50px]
         bg-gray-50 text-[var(--primary)] rounded-full
         border border-gray-200
         hover:bg-gray-100
@@ -316,8 +316,8 @@ header .search i {
 
 /* Dashboard Styles */
 .dashboard {
-    @apply 
-        max-h-max w-full gap-8
+    @apply
+        h-screen w-full gap-8
         flex items-start justify-between
         pl-[300px] p-5
         transition-all ease-in-out duration-500;
@@ -325,27 +325,27 @@ header .search i {
 
 .dashboard .left {
     @apply
-        w-[70%] h-full 
+        w-[70%] h-full
         flex flex-col gap-8
         transition-all ease-in-out duration-500;
 }
 
 .dashboard .right {
     @apply
-        w-[30%] h-full 
+        w-[30%] h-full
         flex flex-col gap-8
         transition-all ease-in-out duration-500;
 }
 
 .dashboard .brief {
-    @apply 
+    @apply
         h-fit w-full gap-5
         flex items-center justify-between
         transition-all ease-in-out duration-500;
 }
 
 .dashboard .brief .task {
-    @apply 
+    @apply
         h-[220px] w-[220px]
         aspect-square
         flex flex-col items-start justify-between
@@ -370,26 +370,26 @@ header .search i {
 }
 
 .dashboard .brief .task i {
-    @apply 
+    @apply
         text-[2.4rem] leading-1 text-[#fff]
         transition-all ease-in-out duration-500;
 }
 
 .dashboard .brief .task p {
-    @apply 
+    @apply
         text-[3rem] leading-10 font-[500] text-[#fff]
         transition-all ease-in-out duration-500;
 }
 
 .dashboard .brief .task h2 {
-    @apply 
+    @apply
         text-[1.2rem] font-[500] text-[#fff]
         transition-all ease-in-out duration-500;
 }
 
 .dashboard .today {
-    @apply 
-        h-[565px] w-full min-w-[900px] gap-4    
+    @apply
+        h-[565px] w-full min-w-[900px] gap-4
         flex flex-col p-[30px]
         bg-[#fff]
         rounded-[30px] overflow-hidden
@@ -403,20 +403,20 @@ header .search i {
 }
 
 .dashboard .today h2 {
-    @apply 
+    @apply
         text-[1.5rem] font-[600] text-[var(--primary)]
         transition-all ease-in-out duration-500;
 }
 
 .dashboard .today .top a {
-    @apply 
+    @apply
         flex items-center justify-center
-        text-[1.3rem] 
+        text-[1.3rem]
         text-[var(--dark-gray)] rounded-full;
 }
 
 .dashboard .today .top a i {
-    @apply 
+    @apply
         flex items-center justify-center;
 }
 
@@ -428,24 +428,24 @@ header .search i {
 }
 
 .dashboard .today .task-container {
-    @apply 
+    @apply
         h-full w-[70%] flex flex-col gap-5
         grid grid-cols-2 gap-5 max-w-[80%]
         transition-all ease-in-out duration-500;
 }
 
 .dashboard .today .task {
-    @apply 
-        flex flex-col 
+    @apply
+        flex flex-col
         h-full w-full
         py-[10px] px-[15px] rounded-[15px]
         bg-[#fff] border-[1px] border-[var(--hover)]
-        shadow-[0_5px_15px_0_rgba(0,0,0,0.10)] 
+        shadow-[0_5px_15px_0_rgba(0,0,0,0.10)]
         transition-all ease-in-out duration-500;
 }
 
 .dashboard .today .task:nth-child(1) {
-    @apply 
+    @apply
         bg-[#fff9c4] border-[#fbc02d]
         shadow-[0_5px_15px_rgba(251,192,45,0.3)]
         translate-z-0
@@ -459,7 +459,7 @@ header .search i {
 }
 
 .dashboard .today .task:nth-child(2) {
-    @apply 
+    @apply
         bg-[#ffe0b2] border-[#f57c00]
         shadow-[0_5px_15px_rgba(245,124,0,0.3)]
         translate-z-0
@@ -473,7 +473,7 @@ header .search i {
 }
 
 .dashboard .today .task:nth-child(3) {
-    @apply 
+    @apply
         bg-[#c8e6c9] border-[#388e3c]
         shadow-[0_5px_15px_rgba(56,142,60,0.3)]
         translate-z-0
@@ -487,7 +487,7 @@ header .search i {
 }
 
 .dashboard .today .task:nth-child(4) {
-    @apply 
+    @apply
         bg-[#bbdefb] border-[#1976d2]
         shadow-[0_5px_15px_rgba(25,118,210,0.3)]
         translate-z-0
@@ -501,7 +501,7 @@ header .search i {
 }
 
 .today .task .header {
-    @apply 
+    @apply
         flex items-center justify-between mb-1;
 }
 
@@ -510,7 +510,7 @@ header .search i {
 }
 
 .today .task button {
-    @apply 
+    @apply
         flex items-center justify-center
         text-[1rem] font-[400] mt-1;
 }
@@ -525,10 +525,10 @@ header .search i {
 }
 
 .today .task .marker {
-    @apply 
+    @apply
         absolute bottom-[15px]
         flex items-center justify-center
-        w-[50px] h-[10px] 
+        w-[50px] h-[10px]
         rounded-full
         transition-all ease-in-out duration-500;
 }
@@ -554,7 +554,7 @@ header .search i {
 }
 
 .today .schedule-container {
-    @apply 
+    @apply
         w-[40%] flex flex-col gap-2.5
         h-[455px] overflow-y-auto
         bg-[#fff] border-[1px] border-[var(--hover)]
@@ -581,7 +581,7 @@ header .search i {
 }*/
 
 .today .schedule {
-    @apply 
+    @apply
         flex items-center justify-between
         h-[50px] w-[100%] px-[15px]
         rounded-[10px]
@@ -590,14 +590,14 @@ header .search i {
 }
 
 .today .schedule {
-    @apply 
+    @apply
         bg-white
         shadow-[0_3px_10px_rgba(0,0,0,0.1)]
         translate-z-0;
 }
 
 .today .schedule:hover {
-    @apply 
+    @apply
         bg-gray-50
         shadow-[0_5px_15px_rgba(0,0,0,0.2)]
         -translate-y-[2px] translate-z-[5px];
@@ -608,25 +608,25 @@ header .search i {
 }
 
 .clock-container {
-    @apply 
+    @apply
         w-full h-fit
         flex items-center justify-center
         bg-white
-        rounded-[30px] 
-        p-[45px] 
+        rounded-[30px]
+        p-[45px]
         shadow-[0_5px_15px_0_rgba(0,0,0,0.20)]
         translate-z-0
         transition-all duration-500 ease-in-out;
 }
 
 .clock {
-    @apply 
+    @apply
         flex items-center justify-center gap-2
         transition-all ease-in-out duration-500;
 }
 
 .clock p {
-    @apply 
+    @apply
         text-[3rem] font-[600] text-[var(--primary)]
         transition-all ease-in-out duration-500;
 }
@@ -638,39 +638,39 @@ header .search i {
 }
 
 .calendar-container .calendar {
-    @apply 
+    @apply
         w-full
-        bg-white 
-        rounded-[30px] 
-        p-[30px] 
+        bg-white
+        rounded-[30px]
+        p-[30px]
         shadow-[0_5px_15px_0_rgba(0,0,0,0.20)]
         translate-z-0
         transition-all duration-500 ease-in-out;
 }
 
 .calendar-header {
-    @apply 
-        flex 
-        justify-between 
-        items-center 
+    @apply
+        flex
+        justify-between
+        items-center
         mb-4;
 }
 
 .calendar-title {
-    @apply 
-        text-lg 
+    @apply
+        text-lg
         font-semibold;
 }
 
 .calendar-nav {
-    @apply 
-        flex 
+    @apply
+        flex
         gap-2;
 }
 
 .calendar-nav-btn {
-    @apply 
-        p-1 
+    @apply
+        p-1
         rounded;
 }
 
@@ -679,111 +679,232 @@ header .search i {
 }
 
 .calendar-grid {
-    @apply 
-        grid 
-        grid-cols-7 
-        gap-1 
-        text-center 
+    @apply
+        grid
+        grid-cols-7
+        gap-1
+        text-center
         mb-2;
 }
 
 .calendar-day-label {
-    @apply 
-        text-gray-500 
+    @apply
+        text-gray-500
         text-sm;
 }
 
 .weather {
-    @apply 
+    @apply
         w-full
-        bg-white 
-        rounded-[30px] 
-        p-[30px] 
+        bg-white
+        rounded-[30px]
+        p-[30px]
         shadow-[0_5px_15px_0_rgba(0,0,0,0.20)]
         translate-z-0
         transition-all duration-500 ease-in-out;
 }
 
 .weather-header {
-    @apply 
-        flex 
-        justify-between 
-        items-center 
+    @apply
+        flex
+        justify-between
+        items-center
         mb-4;
 }
 
 .weather-header h2 {
-    @apply 
-        text-lg 
+    @apply
+        text-lg
         font-semibold;
 }
 
 .weather-header .location {
-    @apply 
-        flex 
-        items-center 
-        gap-2 
-        text-sm 
-        text-gray-500;
+    @apply
+        flex items-center
+        gap-2
+        text-sm text-gray-500;
+}
+
+.weather-header .location i {
+    @apply
+        text-[0.9rem] pt-1;
 }
 
 .weather-info {
-    @apply 
-        flex 
-        flex-col 
+    @apply
+        flex
+        flex-col
         gap-6;
 }
 
 .temperature {
-    @apply 
-        flex 
-        flex-col 
-        items-center 
+    @apply
+        flex
+        flex-col
+        items-center
         gap-2;
 }
 
 .temperature h1 {
-    @apply 
-        text-4xl 
-        font-bold;
+    @apply
+        text-4xl
+        font-[700];
 }
 
 .temperature p {
-    @apply 
-        text-gray-500;
+    @apply
+        text-[1rem]
+        text-gray-500 flex gap-2;
 }
 
+.temperature p i{
+    @apply
+        text-[1.2rem] pt-0.5
+        text-gray-500 flex gap-2;
+}
+
+
 .details {
-    @apply 
-        grid 
-        grid-cols-2 
-        gap-4;
+    @apply
+        flex items-center justify-between
+        grid grid-cols-2 gap-4;
 }
 
 .detail {
-    @apply 
-        flex 
-        flex-col 
-        items-center 
-        gap-2 
-        p-4 
+    @apply
+        flex
+        flex-col
+        items-center
+        gap-2
+        p-4
         rounded-xl
         bg-gray-50;
 }
 
+.detail:hover {
+    @apply
+        bg-white
+        shadow-[0_5px_15px_rgba(0,0,0,0.2)]
+        -translate-y-[2px] translate-z-[5px];
+}
+
 .detail i {
-    @apply 
-        text-xl 
+    @apply
+        text-xl
         text-gray-600;
 }
 
 .detail p:first-of-type {
-    @apply 
-        text-sm 
+    @apply
+        text-sm
         text-gray-500;
 }
 
 .detail p:last-of-type {
-    @apply 
+    @apply
         font-semibold;
+}
+
+/* Tasks Styles */
+.tasks {
+    @apply
+        max-h-max w-full gap-8
+        flex items-start justify-between
+        pl-[300px] p-5
+        transition-all ease-in-out duration-500;
+}
+
+/*Header Styles */
+.tasks header {
+    @apply
+        h-fit w-full py-2.5 px-2.5 pl-7
+        bg-white shadow-[0_5px_15px_0_rgba(0,0,0,0.20)]
+        flex items-center justify-between
+        rounded-full translate-z-0
+        transition-all duration-500 ease-in-out;
+}
+
+.tasks header .nowsec {
+    @apply flex items-center justify-between gap-3;
+}
+
+.tasks header p {
+    @apply
+        flex items-center justify-between pt-1.5 text-[1.5rem];
+}
+
+.tasks header span {
+    @apply
+        text-[1.3rem] text-[var(--primary)] font-[500]
+        transition-all ease-in-out duration-500;
+}
+
+.tasks header .search {
+    @apply
+        flex items-center justify-center gap-2.5
+        w-fit h-fit
+        transition-all ease-in-out duration-500;
+}
+
+.tasks header .search input {
+    @apply
+        w-[350px] h-[50px] px-[20px]
+        bg-gray-50 text-[var(--primary)]
+        border border-gray-200 rounded-full
+        transition-all ease-in-out duration-500;
+}
+
+.tasks header .search input:focus {
+    @apply
+        bg-white
+        rounded-[30px]
+        shadow-[0_3px_5px_0_rgba(0,0,0,0.1)]
+        translate-z-0
+        transition-all duration-500 ease-in-out
+        outline-none;
+}
+
+.tasks header .search input::placeholder {
+    @apply
+        text-gray-400
+        transition-all ease-in-out duration-500;
+}
+
+.tasks header .search i {
+    @apply
+        flex items-center justify-center text-[1.1rem]
+        h-[50px] w-[50px]
+        bg-gray-50 text-[var(--primary)] rounded-full
+        border border-gray-200
+        hover:bg-gray-100
+        transition-all ease-in-out duration-500;
+}
+
+.tasks header .create {
+    @apply
+        h-[50px] px-6
+        flex items-center justify-center gap-3
+        bg-[var(--primary)]
+        text-[1.1rem] font-[500] text-white
+        rounded-full border-[2px] border-[var(--primary)]
+        transition-all ease-in-out duration-500;
+}
+
+.tasks header .create:hover {
+    @apply
+        bg-white
+        text-[var(--primary)]
+}
+
+.tasks header .create:hover i {
+    @apply
+        text-[var(--primary)];
+}
+
+.tasks header .create i {
+    @apply
+        text-[1rem] text-white
+        flex items-center justify-center
+        text-[var(--primary)]
+        transition-all ease-in-out duration-500;
 }

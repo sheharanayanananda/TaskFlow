@@ -73,7 +73,7 @@
                     <h2>Upcoming</h2>
                 </div>
             </div>
-    
+
             <div class="today">
                 <div class="top">
                     <h2>Today's Brief</h2>
@@ -88,7 +88,7 @@
                             </div>
                             <p>10.00 AM - 12.00 PM</p>
                             <p class="desc">
-                                Water plants and disconnect the horse. 
+                                Water plants and disconnect the horse.
                                 Check seeds and add fertilizers.
                                 Feed the plants with water.
                             </p>
@@ -101,7 +101,7 @@
                             </div>
                             <p>10.00 AM - 12.00 PM</p>
                             <p class="desc">
-                                Water plants and disconnect the horse. 
+                                Water plants and disconnect the horse.
                                 Check seeds and add fertilizers.
                                 Feed the plants with water.
                             </p>
@@ -114,7 +114,7 @@
                             </div>
                             <p>10.00 AM - 12.00 PM</p>
                             <p class="desc">
-                                Water plants and disconnect the horse. 
+                                Water plants and disconnect the horse.
                                 Check seeds and add fertilizers.
                                 Feed the plants with water.
                             </p>
@@ -127,7 +127,7 @@
                             </div>
                             <p>10.00 AM - 12.00 PM</p>
                             <p class="desc">
-                                Water plants and disconnect the horse. 
+                                Water plants and disconnect the horse.
                                 Check seeds and add fertilizers.
                                 Feed the plants with water.
                             </p>
@@ -204,7 +204,7 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="calendar-grid">
                         <span class="calendar-day-label">Su</span>
                         <span class="calendar-day-label">Mo</span>
@@ -223,23 +223,23 @@
                 <div class="weather">
                     <div class="weather-header">
                         <h2>Weather</h2>
-                        <p class="location"><i class="fi fi-rr-marker"></i> <span id="city">Loading...</span></p>
+                        <p class="location"><i class="fi fi-rr-marker"></i> <span id="city">City</span></p>
                     </div>
                     <div class="weather-info">
                         <div class="temperature">
-                            <h1 id="temp">--°C</h1>
-                            <p id="condition">--</p>
+                            <h1 id="temp">°C</h1>
+                            <p id="condition"></p>
                         </div>
                         <div class="details">
                             <div class="detail">
                                 <i class="fi fi-rr-humidity"></i>
                                 <p>Humidity</p>
-                                <p id="humidity">--%</p>
+                                <p id="humidity">%</p>
                             </div>
                             <div class="detail">
                                 <i class="fi fi-rr-wind"></i>
                                 <p>Wind</p>
-                                <p id="wind">-- km/h</p>
+                                <p id="wind">km/h</p>
                             </div>
                         </div>
                     </div>
