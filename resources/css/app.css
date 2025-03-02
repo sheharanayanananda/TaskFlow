@@ -319,7 +319,7 @@
     @apply
         h-screen w-full gap-8
         flex items-start justify-between
-        pl-[300px] p-5
+        pl-[290px] p-5
         transition-all ease-in-out duration-500;
 }
 
@@ -809,19 +809,25 @@
 .tasks {
     @apply
         max-h-max w-full gap-8
-        flex items-start justify-between
-        pl-[300px] p-5
+        flex flex-col items-start justify-between
+        pl-[290px] p-5
         transition-all ease-in-out duration-500;
 }
 
 /*Header Styles */
 .tasks header {
     @apply
-        h-fit w-full py-2.5 px-2.5 pl-7
+        h-fit w-[calc(100vw-310px)] py-2.5 px-2.5 pl-7 fixed
         bg-white shadow-[0_5px_15px_0_rgba(0,0,0,0.20)]
         flex items-center justify-between
         rounded-full translate-z-0
         transition-all duration-500 ease-in-out;
+}
+
+.tasks header h1 {
+    @apply
+        text-[1.6rem] text-[var(--primary)] font-[600]
+        transition-all ease-in-out duration-500;
 }
 
 .tasks header .nowsec {
@@ -886,7 +892,7 @@
         flex items-center justify-center gap-3
         bg-[var(--primary)]
         text-[1.1rem] font-[500] text-white
-        rounded-full border-[2px] border-[var(--primary)]
+        rounded-full border-[3px] border-[var(--primary)]
         transition-all ease-in-out duration-500;
 }
 
@@ -907,4 +913,85 @@
         flex items-center justify-center
         text-[var(--primary)]
         transition-all ease-in-out duration-500;
+}
+
+.tasks .today {
+    @apply
+        h-fit w-1/3
+        flex flex-col gap-5
+        transition-all ease-in-out duration-500
+        rounded-[30px]
+        shadow-[0_5px_15px_0_rgba(0,0,0,0.10)]
+        mt-[90px] p-8  bg-white;
+}
+
+.tasks .today .header {
+    @apply
+        flex items-center justify-between
+        transition-all ease-in-out duration-500;
+}
+
+.tasks .today .header h1 {
+    @apply
+        text-[1.5rem] font-[600]
+        transition-all ease-in-out duration-500;
+}
+
+.tasks .today .header .selector {
+    @apply
+        flex justify-center items-center gap-2
+        text-[1rem] border border-gray-200 rounded-full
+        cursor-pointer hover:border-gray-300 focus:outline-none;
+}
+
+.tasks .today .header select {
+    @apply
+        appearance-none h-full w-full text-[0.9rem]
+        py-2 pl-3
+        cursor-pointer focus:outline-none;
+}
+
+.tasks .today .header .selector i {
+    @apply
+        text-[0.9rem] pt-1.5 pr-3;
+}
+
+.tasks .task-container {
+    @apply
+        flex flex-col gap-3;
+}
+
+.tasks .task-container .task {
+    @apply
+        flex justify-between
+        h-fit w-full gap-2.5
+        p-5 rounded-[15px]
+        border-[1px] border-[var(--hover)]
+        shadow-[0_5px_15px_0_rgba(0,0,0,0.10)]
+        transition-all ease-in-out duration-500;
+}
+
+.tasks .task-container .task .left {
+    @apply
+        flex gap-5 justify-between;
+}
+
+.tasks .task-container .task .top {
+    @apply
+        flex flex-col justify-between;
+}
+
+.tasks .task-container .task .strip {
+    @apply
+        flex h-full w-[8px] bg-green-500
+        rounded-full
+        transition-all ease-in-out duration-500;
+}
+
+.tasks .task-container .task h1 {
+    @apply text-[1.3rem] font-[600];
+}
+
+.tasks .task-container .task p {
+    @apply text-[0.8rem] font-[500] leading-2 pt-2;
 }

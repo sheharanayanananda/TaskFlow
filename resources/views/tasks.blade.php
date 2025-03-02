@@ -25,7 +25,7 @@
 
         <div class="tabs">
             <a href="{{ url('/home') }}"><i class="fi fi-rr-house-blank"></i>Home</a>
-            <a href="{{ url('/tasks') }}"><i class="fi fi-rr-notes"></i>Tasks</a>
+            <a href="{{ url('/tasks') }}"><i class="fi fi-rr-notes"></i>My Tasks</a>
             <a href=""><i class="fi fi-rr-calendar-clock"></i>Schedule</a>
             <a href=""><i class="fi fi-rr-settings"></i>Settings</a>
         </div>
@@ -43,18 +43,65 @@
 
     <section class="tasks">
         <header>
-            <div class="nowsec" id="nowsec">
-                <p><i class="fi fi-rr-temperature-high"></i></p>
-                <span id="temp"></span>
-
-                <p class="advice" id="advice"></p>
-            </div>
+            <h1>My Tasks</h1>
             <div class="search">
                 <input type="text" placeholder="Search Here">
                 <button><i class="fi fi-rr-search"></i></button>
             </div>
-            <button class="create"><i class="fi fi-br-plus"></i>Create</button>
+            <div class="nowsec" id="nowsec">
+                <p><i class="fi fi-rr-temperature-high"></i></p>
+                <span id="temp"></span>
+                <p class="advice" id="advice"></p>
+                <button class="create"><i class="fi fi-br-plus"></i>Create</button>
+            </div>
         </header>
+        <div class="today">
+            <div class="header">
+                <h1>Today</h1>
+                <div class="selector">
+                    <select>
+                        <option value="" disabled selected>Organize</option>
+                        <option value="">A - Z</option>
+                        <option value="">Z - A</option>
+                        <option value="">Time</option>
+                        <option value="">Priority</option>
+                    </select>
+                    <i class="fi fi-br-bars-staggered"></i>
+                </div>
+            </div>
+            <div class="task-container">
+                <div class="task">
+                    <div class="left">
+                        <div class="strip"></div>
+                        <div class="top">
+                            <h1>Task Name</h1>
+                            <p>10.00 AM - 1.00 PM</p>
+                        </div>
+                    </div>
+                    <button class="pop"><i class="fi fi-br-menu-dots-vertical"></i></button>
+                </div>
+                <div class="task">
+                    <div class="left">
+                        <div class="strip"></div>
+                        <div class="top">
+                            <h1>Task Name</h1>
+                            <p>10.00 AM - 1.00 PM</p>
+                        </div>
+                    </div>
+                    <button class="pop"><i class="fi fi-br-menu-dots-vertical"></i></button>
+                </div>
+                <div class="task">
+                    <div class="left">
+                        <div class="strip"></div>
+                        <div class="top">
+                            <h1>Task Name</h1>
+                            <p>10.00 AM - 1.00 PM</p>
+                        </div>
+                    </div>
+                    <button class="pop"><i class="fi fi-br-menu-dots-vertical"></i></button>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
