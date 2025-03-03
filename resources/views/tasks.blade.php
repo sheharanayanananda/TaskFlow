@@ -79,26 +79,14 @@
                         </div>
                     </div>
                     <button class="pop"><i class="fi fi-br-menu-dots-vertical"></i></button>
-                </div>
-                <div class="task">
-                    <div class="left">
-                        <div class="strip"></div>
-                        <div class="top">
-                            <h1>Task Name</h1>
-                            <p>10.00 AM - 1.00 PM</p>
-                        </div>
+                    <div class="popup">
+                        <ul>
+                            <li><button><i class="fi fi-rr-check-circle"></i>Done</button></li>
+                            <li><button><i class="fi fi-rr-cross-circle"></i>Failed</button></li>
+                            <li><button><i class="fi fi-rr-edit"></i>Edit</button></li>
+                            <li><button><i class="fi fi-rr-trash"></i>Delete</button></li>
+                        </ul>
                     </div>
-                    <button class="pop"><i class="fi fi-br-menu-dots-vertical"></i></button>
-                </div>
-                <div class="task">
-                    <div class="left">
-                        <div class="strip"></div>
-                        <div class="top">
-                            <h1>Task Name</h1>
-                            <p>10.00 AM - 1.00 PM</p>
-                        </div>
-                    </div>
-                    <button class="pop"><i class="fi fi-br-menu-dots-vertical"></i></button>
                 </div>
             </div>
         </div>

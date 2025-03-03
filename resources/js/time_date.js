@@ -1,4 +1,4 @@
-//clock
+// CLOCK FUNCTION
 function updateClock() {
     const now = new Date();
     let hours = now.getHours();
@@ -15,28 +15,42 @@ function updateClock() {
     const displayMinutes = minutes.toString().padStart(2, '0');
     const displaySeconds = seconds.toString().padStart(2, '0');
 
-    // Update the clock elements
-    document.querySelector('.clock .hour').textContent = displayHours;
-    document.querySelector('.clock .minute').textContent = displayMinutes;
-    document.querySelector('.clock .secs').textContent = displaySeconds;
-    document.querySelector('.clock .time').textContent = ampm;
+    // Ensure elements exist before updating them
+    const hourEl = document.querySelector('.clock .hour');
+    const minuteEl = document.querySelector('.clock .minute');
+    const secondEl = document.querySelector('.clock .secs');
+    const timeEl = document.querySelector('.clock .time');
+
+    if (hourEl && minuteEl && secondEl && timeEl) {
+        hourEl.textContent = displayHours;
+        minuteEl.textContent = displayMinutes;
+        secondEl.textContent = displaySeconds;
+        timeEl.textContent = ampm;
+    }
 }
 
 // Update clock every second
 setInterval(updateClock, 1000);
 updateClock(); // Initial call
 
-//Calandar
-let currentDate = new Date();
-
+// CALENDAR FUNCTION
 function updateCalendar() {
+    const today = new Date(); // Use a local variable for today
+    let currentDate = new Date(today.getFullYear(), today.getMonth(), 1); // Reset to the first day
+
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth();
+
+    // Check if elements exist
+    const monthDisplay = document.getElementById('currentMonth');
+    const calendarDays = document.getElementById('calendarDays');
+
+    if (!monthDisplay || !calendarDays) return; // Exit if elements are missing
 
     // Update month display
     const monthNames = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
-    document.getElementById('currentMonth').textContent = `${monthNames[month]} ${year}`;
+    monthDisplay.textContent = `${monthNames[month]} ${year}`;
 
     // Calculate days
     const firstDay = new Date(year, month, 1);
@@ -53,29 +67,34 @@ function updateCalendar() {
 
     // Current month days
     for (let i = 1; i <= lastDay.getDate(); i++) {
-        const today = new Date();
         const isToday = i === today.getDate() &&
-                      month === today.getMonth() &&
-                      year === today.getFullYear();
+                        month === today.getMonth() &&
+                        year === today.getFullYear();
 
         days.push(`<div class="p-2 text-center ${isToday ?
             'bg-blue-500 text-white' : 'hover:bg-gray-100'} rounded-[15px]">
             ${i}</div>`);
     }
 
-    document.getElementById('calendarDays').innerHTML = days.join('');
+    calendarDays.innerHTML = days.join('');
 }
 
-// Event listeners for navigation
-document.getElementById('prevMonth').addEventListener('click', () => {
-    currentDate.setMonth(currentDate.getMonth() - 1);
+// Ensure event listeners are only added if elements exist
+document.addEventListener("DOMContentLoaded", function () {
     updateCalendar();
-});
 
-document.getElementById('nextMonth').addEventListener('click', () => {
-    currentDate.setMonth(currentDate.getMonth() + 1);
-    updateCalendar();
-});
+    const prevBtn = document.getElementById('prevMonth');
+    const nextBtn = document.getElementById('nextMonth');
 
-// Initial calendar render
-updateCalendar();
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            updateCalendar();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            updateCalendar();
+        });
+    }
+});

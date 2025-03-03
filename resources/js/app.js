@@ -1,30 +1,33 @@
 import './bootstrap';
 import './time_date';
 import './weather';
+import './greeting';
 
-function updateGreeting() {
-    const hour = new Date().getHours();
-    const greeting = document.querySelector('.greeting');
+//My Tasks page popup
+document.addEventListener("DOMContentLoaded", function () {
+    const popButtons = document.querySelectorAll(".pop");
 
-    let greetingText = '';
-    //let emoji = '';
+    popButtons.forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevents immediate closing when clicking the button
+            const popup = this.nextElementSibling; // Selects the next sibling popup
 
-    if (hour >= 5 && hour < 12) {
-        greetingText = 'Good Morning!';
-        //emoji = '🌅';
-    } else if (hour >= 12 && hour < 18) {
-        greetingText = 'Good Afternoon!';
-        //emoji = '☀️';
-    } else if (hour >= 18 && hour < 22) {
-        greetingText = 'Good Evening!';
-        //emoji = '🌆';
-    } else {
-        greetingText = 'Good Night!';
-        //emoji = '🌙';
-    }
+            // Close all other popups before opening the clicked one
+            document.querySelectorAll(".popup").forEach(p => {
+                if (p !== popup) {
+                    p.classList.remove("active");
+                }
+            });
 
-    greeting.innerHTML = `${greetingText}`;
-    /*greeting.innerHTML = `${greetingText} ${emoji}`;*/
-}
+            // Toggle the popup's active class
+            popup.classList.toggle("active");
+        });
+    });
 
-updateGreeting(); // Initial call
+    // Close popups when clicking outside
+    document.addEventListener("click", function () {
+        document.querySelectorAll(".popup").forEach(p => {
+            p.classList.remove("active");
+        });
+    });
+});

@@ -963,7 +963,7 @@
 
 .tasks .task-container .task {
     @apply
-        flex justify-between
+        flex justify-between relative
         h-fit w-full gap-2.5
         p-5 rounded-[15px]
         border-[1px] border-[var(--hover)]
@@ -994,4 +994,57 @@
 
 .tasks .task-container .task p {
     @apply text-[0.8rem] font-[500] leading-2 pt-2;
+}
+
+.tasks .task-container .task .popup {
+    @apply
+        hidden absolute right-[-50px] bg-white p-1 pt-0 h-fit
+        border-[1px] border-[var(--hover)] rounded-[15px]
+        shadow-[0_5px_20px_0_rgba(0,0,0,0.20)]
+        transition-all ease-in-out duration-500;
+}
+
+.tasks .task-container .task .popup.active {
+    @apply
+        flex;
+    animation: popup 0.3s ease-in-out forwards;
+}
+
+@keyframes popup {
+    0% {
+        opacity: 0;
+        transform: scale(80%);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(105%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}
+
+.tasks .task-container .task .popup ul {
+    @apply
+        w-full h-fit flex flex-col gap-0
+        transition-all ease-in-out duration-500;
+}
+
+.tasks .task-container .task .popup ul li button {
+    @apply
+        w-full h-fit flex gap-3 justify-start
+        text-[1rem] py-2 px-4 border-[var(--hover)] rounded-[11px]
+        transition-all ease-in-out duration-500;
+}
+
+.tasks .task-container .task .popup ul li button:hover {
+    @apply
+        bg-gray-200;
+}
+
+.tasks .task-container .task .popup ul li button i {
+    @apply
+        text-[1rem] pt-1;
 }
