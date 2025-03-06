@@ -13,9 +13,9 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/css/tasks.css', 'resources/js/app.js'])
 </head>
-<body class="body">
+<body>
     <nav class="sidebar">
         <div class="header">
             <h1 class="logo">Task<span>Flow</span></h1>
@@ -52,42 +52,53 @@
                 <p><i class="fi fi-rr-temperature-high"></i></p>
                 <span id="temp"></span>
                 <p class="advice" id="advice"></p>
-                <button class="create"><i class="fi fi-br-plus"></i>Create</button>
+                <a class="create" href="{{ url('/create_task') }}"><i class="fi fi-br-plus"></i>Create</a>
             </div>
         </header>
         <div class="today">
             <div class="header">
                 <h1>Today</h1>
                 <div class="selector">
-                    <select>
+                    <!--select>
                         <option value="" disabled selected>Organize</option>
                         <option value="">A - Z</option>
                         <option value="">Z - A</option>
                         <option value="">Time</option>
                         <option value="">Priority</option>
-                    </select>
-                    <i class="fi fi-br-bars-staggered"></i>
+                    <select>
+                    <i-- class="fi fi-br-bars-staggered"></i-->
                 </div>
             </div>
             <div class="task-container">
+                @foreach ($tasks as $task)
                 <div class="task">
                     <div class="left">
                         <div class="strip"></div>
                         <div class="top">
-                            <h1>Task Name</h1>
-                            <p>10.00 AM - 1.00 PM</p>
+                            <h1>{{$task['title']}}</h1>
+                            <p>
+                                {{ \Carbon\Carbon::createFromFormat('H:i:s', $task['start_time'])->format('h:i A') }} -
+                                {{ \Carbon\Carbon::createFromFormat('H:i:s', $task['end_time'])->format('h:i A') }}
+                            </p>
                         </div>
                     </div>
                     <button class="pop"><i class="fi fi-br-menu-dots-vertical"></i></button>
                     <div class="popup">
                         <ul>
-                            <li><button><i class="fi fi-rr-check-circle"></i>Done</button></li>
-                            <li><button><i class="fi fi-rr-cross-circle"></i>Failed</button></li>
-                            <li><button><i class="fi fi-rr-edit"></i>Edit</button></li>
-                            <li><button><i class="fi fi-rr-trash"></i>Delete</button></li>
+                            <!--<li><button><i class="fi fi-rr-check-circle"></i>Done</button></li>
+                            <li><button><i class="fi fi-rr-cross-circle"></i>Failed</button></li>-->
+                            <li><a href="/editTask/{{$task->id}}"><i class="fi fi-rr-edit"></i>Edit</a></li>
+                            <li>
+                                <form action="/deleteTask/{{$task->id}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="delete"><i class="fi fi-rr-trash"></i>Delete</button>
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </section>

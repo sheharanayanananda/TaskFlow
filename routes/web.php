@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Tasks;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -11,5 +13,13 @@ Route::get('/home', function () {
 });
 
 Route::get('/tasks', function () {
-    return view('tasks');
+    $tasks = Tasks::all();
+    return view('tasks', ['tasks' => $tasks]);
 });
+
+Route::get('/create_task', function () {
+    return view('create_task');
+});
+
+Route::post('/createTask', [TaskController::class, 'create_task_db']);
+Route::get('/editTask/{task}', [TaskController::class, 'showEditForm']);

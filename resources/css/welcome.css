@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Flat Icons */
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'); /* Regular Rounded */
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css');   /* Solid Rounded */
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css');    /* Bold Rounded */
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css');    /* Thin Rounded */
+
+/* Tailwind CSS Import & Source */
+@import "tailwindcss";
+@source "../views";
+
+/* Welcome Page Styles */
+.welcome {
+    @apply
+        h-screen w-screen
+        flex flex-col
+        justify-center items-center
+        bg-[url('/public/images/background.png')] bg-center bg-cover bg-fixed bg-[var(--bg)]
+        transition-all ease-in-out duration-500;
+}
+
+.welcome .container {
+    @apply
+        w-screen h-screen
+        flex flex-col
+        justify-center items-center
+        bg-[radial-gradient(ellipse_at_center,var(--bg)_20%,#ebfff3c7_50%,#ebfff354_80%)]
+        transition-all ease-in-out duration-500;
+}
+
+.welcome h1 {
+    @apply text-[7rem]/[4rem] font-[600] text-[var(--secondary)]
+    pt-[80px]
+    transition-all ease-in-out duration-500;
+    font-family: var(--borel);
+}
+
+.welcome h1 span {
+    @apply text-[var(--primary)]
+    transition-all ease-in-out duration-500;
+    font-family: var(--borel);
+}
+
+.welcome p {
+    @apply text-[1.2rem]/[1rem] font-medium mt-4 tracking-[12px] pb-[60px]
+    transition-all ease-in-out duration-500;
+}
+
+.welcome .buttons {
+    @apply flex justify-center items-center gap-2
+    transition-all ease-in-out duration-500;
+}
+
+.welcome .buttons a {
+    @apply
+        px-5 py-2
+        text-lg font-semibold
+        transition-all ease-in-out duration-500;
+}
+
+/* First Button */
+.welcome .buttons a:nth-child(1) {
+    @apply
+        text-[var(--bg)]
+        bg-[var(--primary)]
+        border-[3px] border-[var(--primary)] rounded-l-[50px] rounded-tr-[15px] rounded-br-[15px]
+        transition-all ease-in-out duration-500;
+}
+
+.welcome .buttons a:nth-child(1):hover {
+    @apply
+        text-[var(--primary)]
+        bg-[var(--bg)];
+}
+
+/* Second Button */
+.welcome .buttons a:nth-child(2) {
+    @apply
+        text-[var(--primary)]
+        bg-[var(--bg)]
+        border-[3px] border-[var(--primary)] rounded-r-[50px] rounded-tl-[15px] rounded-bl-[15px]
+        transition-all ease-in-out duration-500;
+}
+
+.welcome .buttons a:nth-child(2):hover {
+    @apply
+        text-[var(--bg)]
+        bg-[var(--primary)];
+}

@@ -13,9 +13,9 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/css/home.css', 'resources/js/app.js'])
 </head>
-<body class="body">
+<body>
     <nav class="sidebar">
         <div class="header">
             <h1 class="logo">Task<span>Flow</span></h1>

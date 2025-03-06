@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Flat Icons */
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'); /* Regular Rounded */
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css');   /* Solid Rounded */
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css');    /* Bold Rounded */
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css');    /* Thin Rounded */
+
+/* Tailwind CSS Import & Source */
+@import "tailwindcss";
+@source "../views";
+
+.create_task {
+    @apply h-screen w-screen flex flex-col items-center justify-center;
+}
+
+.create_task .container {
+    @apply w-full h-fit p-5 flex flex-col justify-center items-center;
+}
+
+.create_task .container form {
+    @apply
+        flex flex-col justify-center items-center gap-6
+        w-[450px] h-full p-[30px] rounded-[30px]
+        bg-white shadow-[0_5px_15px_0_rgba(0,0,0,0.15)]
+        transition-all ease-in-out duration-500;
+}
+
+.create_task .container form h1 {
+    @apply text-[2rem] font-[700] pb-5;
+}
+
+form input[type="text"] {
+    @apply
+        w-full text-[1.1rem] leading-[1rem] p-3.5 border-[2px] border-[var(--hover)] rounded-[20px]
+        transition-all ease-in-out duration-500;
+}
+
+form input[type="text"]:focus {
+    @apply text-[var(--primary)] border-[var(--primary)] outline-none;
+}
+
+form input[type="date"] {
+    @apply
+        w-full text-[1rem] text-gray-400 p-3.5 border-[2px] border-[var(--hover)] rounded-[20px]
+        transition-all ease-in-out duration-500;
+}
+
+form input[type="date"]:focus {
+    @apply text-[var(--primary)] border-[var(--primary)] outline-none;
+}
+
+form .time {
+    @apply
+        w-full h-fit flex gap-2.5 justify-between
+        border-[2px] border-[var(--hover)] rounded-[20px];
+}
+
+form .time p {
+    @apply
+        text-[1.3rem] justify-center items-center;
+}
+
+form .time p i {
+    @apply
+        flex pt-[1rem];
+}
+
+form input[type="time"] {
+    @apply
+        w-fit text-[1rem] text-gray-400 p-3.5
+        transition-all ease-in-out duration-500;
+}
+
+form input[type="time"]:focus {
+    @apply text-[var(--primary)] border-[var(--primary)] outline-none;
+}
+
+
+form button {
+    @apply
+        w-fit text-[1.2rem] font-[400] text-white bg-[var(--primary)]
+        border-[3px] border-[var(--primary)] rounded-[20px] py-3 px-4 mt-10
+        transition-all ease-in-out duration-500;
+}
+
+form button:hover {
+    @apply text-[var(--primary)] bg-white;
+}
