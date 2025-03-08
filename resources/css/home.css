@@ -71,7 +71,7 @@
 /* Dashboard Styles */
 .dashboard {
     @apply
-        h-screen w-full gap-8
+        h-screen w-full gap-5
         flex items-start justify-between
         pl-[290px] p-5
         transition-all ease-in-out duration-500;
@@ -80,70 +80,75 @@
 .dashboard .left {
     @apply
         w-[70%] h-full
-        flex flex-col gap-8
+        flex flex-col gap-5
         transition-all ease-in-out duration-500;
 }
 
 .dashboard .right {
     @apply
         w-[30%] h-full
-        flex flex-col gap-8
+        flex flex-col gap-5
         transition-all ease-in-out duration-500;
 }
 
 .dashboard .brief {
     @apply
-        h-fit w-full gap-5
+        h-[26.4%] w-full gap-5
         flex items-center justify-between
         transition-all ease-in-out duration-500;
 }
 
-.dashboard .brief .task {
+.dashboard .brief .brief-box {
     @apply
-        h-[220px] w-[220px]
-        aspect-square
+        h-full aspect-square
         flex flex-col items-start justify-between
         p-[30px] rounded-[30px]
         transition-all ease-in-out duration-500;
 }
 
-.dashboard .brief .task:nth-child(1) {
+.dashboard .brief .brief-box:nth-child(1) {
     @apply bg-gradient-to-t from-[#007bff] to-[#80cfff] shadow-[0_12px_20px_0] shadow-[#007bff99];
 }
 
-.dashboard .brief .task:nth-child(2) {
+.dashboard .brief .brief-box:nth-child(2) {
     @apply bg-gradient-to-t from-[#1db954] to-[#a1e3a1] shadow-[0_12px_20px_0] shadow-[#1db95499];
 }
 
-.dashboard .brief .task:nth-child(3) {
+.dashboard .brief .brief-box:nth-child(3) {
     @apply bg-gradient-to-t from-[#ff7e00] to-[#ffcc80] shadow-[0_12px_20px_0] shadow-[#ff7e0099];
 }
 
-.dashboard .brief .task:nth-child(4) {
+.dashboard .brief .brief-box:nth-child(4) {
     @apply bg-gradient-to-t from-[#6f42c1] to-[#d1a3ff] shadow-[0_12px_20px_0] shadow-[#6f42c199];
 }
 
-.dashboard .brief .task i {
+.dashboard .brief .brief-box i {
     @apply
         text-[2.4rem] leading-1 text-[#fff]
         transition-all ease-in-out duration-500;
 }
 
-.dashboard .brief .task p {
+.dashboard .brief .brief-box p {
     @apply
         text-[3rem] leading-10 font-[500] text-[#fff]
         transition-all ease-in-out duration-500;
 }
 
-.dashboard .brief .task h2 {
+.dashboard .brief .brief-box h2 {
     @apply
         text-[1.2rem] font-[500] text-[#fff]
         transition-all ease-in-out duration-500;
 }
 
+.dashboard .brief2 {
+    @apply
+        flex items-center justify-between gap-5
+        h-[calc(100%-38.2%)];
+}
+
 .dashboard .today {
     @apply
-        h-[565px] w-full min-w-[900px] gap-4
+        h-full w-full gap-4
         flex flex-col p-[30px]
         bg-[#fff]
         rounded-[30px] overflow-hidden
@@ -152,218 +157,145 @@
         transition-all duration-500 ease-in-out;
 }
 
-.dashboard .today .top {
-    @apply h-6 flex items-center justify-between;
+.today .top {
+    @apply flex items-center justify-between pb-3;
 }
 
-.dashboard .today h2 {
+.today .top h2 {
     @apply
         text-[1.5rem] font-[600] text-[var(--primary)]
         transition-all ease-in-out duration-500;
 }
 
-.dashboard .today .top a {
+.today .top a {
     @apply
         flex items-center justify-center
         text-[1.3rem]
         text-[var(--dark-gray)] rounded-full;
 }
 
-.dashboard .today .top a i {
+.today .top a i {
     @apply
         flex items-center justify-center;
 }
 
-.today .bottom {
+.today .task-container {
     @apply
-        h-full w-full mt-2.5
-        flex items-start justify-between gap-5
+        h-fit w-full gap-5 overflow-y-scroll
+        grid grid-cols-2
         transition-all ease-in-out duration-500;
 }
 
-.dashboard .today .task-container {
-    @apply
-        h-full w-[70%] flex flex-col gap-5
-        grid grid-cols-2 gap-5 max-w-[80%]
-        transition-all ease-in-out duration-500;
+.today .task-container::-webkit-scrollbar {
+    @apply hidden;
 }
 
-.dashboard .today .task {
+.today .task-container .task {
     @apply
-        flex flex-col
-        h-full w-full
-        py-[10px] px-[15px] rounded-[15px]
-        bg-[#fff] border-[1px] border-[var(--hover)]
+        flex items-start
+        h-full w-full gap-4
+        p-5 rounded-[15px]
+        border-[1px] border-[var(--hover)]
         shadow-[0_5px_15px_0_rgba(0,0,0,0.10)]
         transition-all ease-in-out duration-500;
 }
 
-.dashboard .today .task:nth-child(1) {
+.today .task-container .task .content {
     @apply
-        bg-[#fff9c4] border-[#fbc02d]
-        shadow-[0_5px_15px_rgba(251,192,45,0.3)]
-        translate-z-0
-        transition-all duration-300 ease-in-out;
+        flex flex-col justify-center items-start h-fit;
 }
 
-.dashboard .today .task:nth-child(1):hover {
+.today .task-container .task .strip {
     @apply
-        shadow-[0_15px_30px_rgba(251,192,45,0.4)]
-        -translate-y-[10px] translate-z-[20px];
-}
-
-.dashboard .today .task:nth-child(2) {
-    @apply
-        bg-[#ffe0b2] border-[#f57c00]
-        shadow-[0_5px_15px_rgba(245,124,0,0.3)]
-        translate-z-0
-        transition-all duration-300 ease-in-out;
-}
-
-.dashboard .today .task:nth-child(2):hover {
-    @apply
-        shadow-[0_15px_30px_rgba(245,124,0,0.4)]
-        -translate-y-[10px] translate-z-[20px];
-}
-
-.dashboard .today .task:nth-child(3) {
-    @apply
-        bg-[#c8e6c9] border-[#388e3c]
-        shadow-[0_5px_15px_rgba(56,142,60,0.3)]
-        translate-z-0
-        transition-all duration-300 ease-in-out;
-}
-
-.dashboard .today .task:nth-child(3):hover {
-    @apply
-        shadow-[0_15px_30px_rgba(56,142,60,0.4)]
-        -translate-y-[10px] translate-z-[20px];
-}
-
-.dashboard .today .task:nth-child(4) {
-    @apply
-        bg-[#bbdefb] border-[#1976d2]
-        shadow-[0_5px_15px_rgba(25,118,210,0.3)]
-        translate-z-0
-        transition-all duration-300 ease-in-out;
-}
-
-.dashboard .today .task:nth-child(4):hover {
-    @apply
-        shadow-[0_15px_30px_rgba(25,118,210,0.4)]
-        -translate-y-[10px] translate-z-[20px];
-}
-
-.today .task .header {
-    @apply
-        flex items-center justify-between mb-1;
-}
-
-.today .task h1 {
-    @apply text-[1.3rem] text-left font-[600];
-}
-
-.today .task button {
-    @apply
-        flex items-center justify-center
-        text-[1rem] font-[400] mt-1;
-}
-
-.today .task p {
-    @apply text-[0.9rem] text-justify font-[500] mb-2;
-}
-
-.today .task .desc {
-    @apply text-[0.9rem] text-justify font-[500] mt-[5px];
-    font-family: var(--borel);
-}
-
-.today .task .marker {
-    @apply
-        absolute bottom-[15px]
-        flex items-center justify-center
-        w-[50px] h-[10px]
+        flex h-full w-[8px] bg-green-500
         rounded-full
         transition-all ease-in-out duration-500;
 }
 
-/* Reddish Yellow task marker */
-.today .task:nth-child(1) .marker {
-    @apply bg-[#ffad31] border-[#ff8f00];
+.today .task-container .task h1 {
+    @apply text-[1.3rem] leading-[1.6rem] font-[600];
 }
 
-/* Reddish Orange task marker */
-.today .task:nth-child(2) .marker {
-    @apply bg-[#ff5722] border-[#e64a19];
+.today .task-container .task p {
+    @apply text-[0.8rem] font-[500] pt-1;
 }
 
-/* Blueish Green task marker */
-.today .task:nth-child(3) .marker {
-    @apply bg-[#26a69a] border-[#00897b];
-}
-
-/* Purpleish Blue task marker */
-.today .task:nth-child(4) .marker {
-    @apply bg-[#5c6bc0] border-[#3949ab];
-}
-
-.today .schedule-container {
+.upcoming {
     @apply
-        w-[40%] flex flex-col gap-2.5
-        h-[455px] overflow-y-auto
-        bg-[#fff] border-[1px] border-[var(--hover)]
-        rounded-[15px] py-[10px] px-[10px]
-        inset-shadow-[0_5px_10px_0_rgba(0,0,0,0.20)]
-        scroll-auto
+        h-full w-2/4 gap-4
+        flex flex-col p-[30px]
+        bg-[#fff]
+        rounded-[30px] overflow-hidden
+        shadow-[0_5px_15px_0_rgba(0,0,0,0.20)]
+        translate-z-0
+        transition-all duration-500 ease-in-out;
+}
+
+.upcoming .top {
+    @apply flex items-center justify-between pb-3;
+}
+
+.upcoming .top h2 {
+    @apply
+        text-[1.5rem] font-[600] text-[var(--primary)]
         transition-all ease-in-out duration-500;
 }
 
-.today .schedule-container::-webkit-scrollbar {
-    @apply w-2 hidden;
-}
-
-/*.today .schedule-container::-webkit-scrollbar-track {
-    @apply bg-[var(--hover)] rounded-[10px] my-2.5;
-}
-
-.today .schedule-container::-webkit-scrollbar-thumb {
-    @apply bg-[var(--primary)] rounded-[10px] my-0.5;
-}
-
-.today .schedule-container::-webkit-scrollbar-thumb:hover {
-    @apply bg-[var(--primary)];
-}*/
-
-.today .schedule {
+.upcoming .top a {
     @apply
-        flex items-center justify-between
-        h-[50px] w-[100%] px-[15px]
-        rounded-[10px]
-        flex-shrink-0
+        flex items-center justify-center
+        text-[1.3rem]
+        text-[var(--dark-gray)] rounded-full;
+}
+
+.upcoming .top a i {
+    @apply
+        flex items-center justify-center;
+}
+
+.upcoming .task-container {
+    @apply
+        h-full w-full flex flex-col gap-5 overflow-y-auto
         transition-all ease-in-out duration-500;
 }
 
-.today .schedule {
-    @apply
-        bg-white
-        shadow-[0_3px_10px_rgba(0,0,0,0.1)]
-        translate-z-0;
+.upcoming .task-container::-webkit-scrollbar {
+    @apply hidden;
 }
 
-.today .schedule:hover {
+.upcoming .task-container .task {
     @apply
-        bg-gray-50
-        shadow-[0_5px_15px_rgba(0,0,0,0.2)]
-        -translate-y-[2px] translate-z-[5px];
+        flex items-start
+        h-full w-full gap-4
+        p-5 rounded-[15px]
+        border-[1px] border-[var(--hover)]
+        shadow-[0_3px_5px_0_rgba(0,0,0,0.10)]
+        transition-all ease-in-out duration-500;
 }
 
-.today .schedule p {
-    @apply text-[0.9rem] font-[500];
+.upcoming .task-container .task .content {
+    @apply
+        flex flex-col justify-center items-start h-fit;
+}
+
+.upcoming .task-container .task .strip {
+    @apply
+        flex h-full w-[8px] bg-green-500
+        rounded-full
+        transition-all ease-in-out duration-500;
+}
+
+.upcoming .task-container .task h1 {
+    @apply text-[1.3rem] leading-[1.6rem] font-[600];
+}
+
+.upcoming .task-container .task p {
+    @apply text-[0.8rem] font-[500] pt-1;
 }
 
 .clock-container {
     @apply
-        w-full h-fit
+        w-full h-full
         flex items-center justify-center
         bg-white
         rounded-[30px]
@@ -387,7 +319,7 @@
 
 .calendar-container {
     @apply
-        w-full h-fit gap-10
+        w-full h-fit gap-5
         flex flex-col items-start justify-center;
 }
 
@@ -516,7 +448,6 @@
         text-[1.2rem] pt-0.5
         text-gray-500 flex gap-2;
 }
-
 
 .details {
     @apply

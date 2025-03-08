@@ -52,128 +52,184 @@
             </header>
 
             <div class="brief">
-                <div class="task">
+                <div class="brief-box">
                     <i class="fi fi-rr-notes"></i>
                     <p>20</p>
                     <h2>Tasks</h2>
                 </div>
-                <div class="task">
+                <div class="brief-box">
                     <i class="fi fi-rr-check-circle"></i>
                     <p>12</p>
                     <h2>Completed</h2>
                 </div>
-                <div class="task">
+                <div class="brief-box">
                     <i class="fi fi-rr-circle-xmark"></i>
                     <p>2</p>
                     <h2>Failed</h2>
                 </div>
-                <div class="task">
+                <div class="brief-box">
                     <i class="fi fi-rr-time-forward"></i>
                     <p>60</p>
                     <h2>Upcoming</h2>
                 </div>
             </div>
 
-            <div class="today">
-                <div class="top">
-                    <h2>Today's Brief</h2>
-                    <a href="" class="view"><i class="fi fi-rr-up-right-from-square"></i></a>
-                </div>
-                <div class="bottom">
+            <div class="brief2">
+                <div class="today">
+                    <div class="top">
+                        <h2>Today's Brief</h2>
+                        <a href="" class="view"><i class="fi fi-rr-up-right-from-square"></i></a>
+                    </div>
                     <div class="task-container">
                         <div class="task">
-                            <div class="header">
-                                <h1>Watering Plants</h1>
-                                <button><i class="fi fi-br-menu-dots-vertical"></i></button>
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
                             </div>
-                            <p>10.00 AM - 12.00 PM</p>
-                            <p class="desc">
-                                Water plants and disconnect the horse.
-                                Check seeds and add fertilizers.
-                                Feed the plants with water.
-                            </p>
-                            <div class="marker"></div>
                         </div>
                         <div class="task">
-                            <div class="header">
-                                <h1>Watering Plants</h1>
-                                <button><i class="fi fi-br-menu-dots-vertical"></i></button>
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
                             </div>
-                            <p>10.00 AM - 12.00 PM</p>
-                            <p class="desc">
-                                Water plants and disconnect the horse.
-                                Check seeds and add fertilizers.
-                                Feed the plants with water.
-                            </p>
-                            <div class="marker"></div>
                         </div>
                         <div class="task">
-                            <div class="header">
-                                <h1>Watering Plants</h1>
-                                <button><i class="fi fi-br-menu-dots-vertical"></i></button>
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
                             </div>
-                            <p>10.00 AM - 12.00 PM</p>
-                            <p class="desc">
-                                Water plants and disconnect the horse.
-                                Check seeds and add fertilizers.
-                                Feed the plants with water.
-                            </p>
-                            <div class="marker"></div>
                         </div>
                         <div class="task">
-                            <div class="header">
-                                <h1>Watering Plants</h1>
-                                <button><i class="fi fi-br-menu-dots-vertical"></i></button>
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
                             </div>
-                            <p>10.00 AM - 12.00 PM</p>
-                            <p class="desc">
-                                Water plants and disconnect the horse.
-                                Check seeds and add fertilizers.
-                                Feed the plants with water.
-                            </p>
-                            <div class="marker"></div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="schedule-container">
-                        <div class="schedule">
-                            <p>Watering Plants</p>
-                            <p>In 2h 15min</p>
-                        </div>
-                        <div class="schedule">
-                            <p>Watering Plants</p>
-                            <p>In 2h 15min</p>
-                        </div>
-                        <div class="schedule">
-                            <p>Watering Plants</p>
-                            <p>In 2h 15min</p>
-                        </div>
-                        <div class="schedule">
-                            <p>Watering Plants</p>
-                            <p>In 2h 15min</p>
-                        </div>
-                        <div class="schedule">
-                            <p>Watering Plants</p>
-                            <p>In 2h 15min</p>
-                        </div>
-                        <div class="schedule">
-                            <p>Watering Plants</p>
-                            <p>In 2h 15min</p>
-                        </div>
-                        <div class="schedule">
-                            <p>Watering Plants</p>
-                            <p>In 2h 15min</p>
-                        </div>
-                        <div class="schedule">
-                            <p>Watering Plants</p>
-                            <p>In 2h 15min</p>
-                        </div>
-                        <div class="schedule">
-                            <p>Watering Plants</p>
-                            <p>In 2h 15min</p>
-                        </div>
-                        <div class="schedule">
-                            <p>Watering Plants</p>
-                            <p>In 2h 15min</p>
+                </div>
+                <div class="upcoming">
+                    <div class="top">
+                        <h2>Tomorrow</h2>
+                        <a href="" class="view"><i class="fi fi-rr-up-right-from-square"></i></a>
+                    </div>
+                    <div class="bottom">
+                        <div class="task-container">
+                            <div class="task">
+                                <div class="strip"></div>
+                                <div class="content">
+                                    <h1>Task Name</h1>
+                                    <p>12.00 PM - 1.00 PM</p>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="strip"></div>
+                                <div class="content">
+                                    <h1>Task Name</h1>
+                                    <p>12.00 PM - 1.00 PM</p>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="strip"></div>
+                                <div class="content">
+                                    <h1>Task Name</h1>
+                                    <p>12.00 PM - 1.00 PM</p>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="strip"></div>
+                                <div class="content">
+                                    <h1>Task Name</h1>
+                                    <p>12.00 PM - 1.00 PM</p>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="strip"></div>
+                                <div class="content">
+                                    <h1>Task Name</h1>
+                                    <p>12.00 PM - 1.00 PM</p>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="strip"></div>
+                                <div class="content">
+                                    <h1>Task Name</h1>
+                                    <p>12.00 PM - 1.00 PM</p>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="strip"></div>
+                                <div class="content">
+                                    <h1>Task Name</h1>
+                                    <p>12.00 PM - 1.00 PM</p>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="strip"></div>
+                                <div class="content">
+                                    <h1>Task Name</h1>
+                                    <p>12.00 PM - 1.00 PM</p>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="strip"></div>
+                                <div class="content">
+                                    <h1>Task Name</h1>
+                                    <p>12.00 PM - 1.00 PM</p>
+                                </div>
+                            </div>
+                            <div class="task">
+                                <div class="strip"></div>
+                                <div class="content">
+                                    <h1>Task Name</h1>
+                                    <p>12.00 PM - 1.00 PM</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
