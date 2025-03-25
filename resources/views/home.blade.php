@@ -26,7 +26,7 @@
         <div class="tabs">
             <a href="{{ url('/home') }}"><i class="fi fi-rr-house-blank"></i>Home</a>
             <a href="{{ url('/tasks') }}"><i class="fi fi-rr-notes"></i>My Tasks</a>
-            <a href=""><i class="fi fi-rr-calendar-clock"></i>Schedule</a>
+            <!--a href=""><i class="fi fi-rr-calendar-clock"></i>Schedule</a-->
             <a href=""><i class="fi fi-rr-settings"></i>Settings</a>
         </div>
 
@@ -37,7 +37,7 @@
                 <h2>Username</h2>
                 <p>username@gmail.com</p>
             </div>
-            <a href="" class="logout"><i class="fi fi-rr-exit"></i></a>
+            <a href="{{ url('/') }}" class="logout"><i class="fi fi-rr-exit"></i></a>
         </div>
     </nav>
 
@@ -77,8 +77,8 @@
             <div class="brief2">
                 <div class="today">
                     <div class="top">
-                        <h2>Today's Brief</h2>
-                        <a href="" class="view"><i class="fi fi-rr-up-right-from-square"></i></a>
+                        <h2>Today's Schedule</h2>
+                        <a href="{{ url('/tasks') }}" class="view"><i class="fi fi-rr-up-right-from-square"></i></a>
                     </div>
                     <div class="task-container">
                         <div class="task">
@@ -156,79 +156,77 @@
                 <div class="upcoming">
                     <div class="top">
                         <h2>Tomorrow</h2>
-                        <a href="" class="view"><i class="fi fi-rr-up-right-from-square"></i></a>
+                        <a href="{{ url('/tasks') }}" class="view"><i class="fi fi-rr-up-right-from-square"></i></a>
                     </div>
-                    <div class="bottom">
-                        <div class="task-container">
-                            <div class="task">
-                                <div class="strip"></div>
-                                <div class="content">
-                                    <h1>Task Name</h1>
-                                    <p>12.00 PM - 1.00 PM</p>
-                                </div>
+                    <div class="task-container">
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
                             </div>
-                            <div class="task">
-                                <div class="strip"></div>
-                                <div class="content">
-                                    <h1>Task Name</h1>
-                                    <p>12.00 PM - 1.00 PM</p>
-                                </div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
                             </div>
-                            <div class="task">
-                                <div class="strip"></div>
-                                <div class="content">
-                                    <h1>Task Name</h1>
-                                    <p>12.00 PM - 1.00 PM</p>
-                                </div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
                             </div>
-                            <div class="task">
-                                <div class="strip"></div>
-                                <div class="content">
-                                    <h1>Task Name</h1>
-                                    <p>12.00 PM - 1.00 PM</p>
-                                </div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
                             </div>
-                            <div class="task">
-                                <div class="strip"></div>
-                                <div class="content">
-                                    <h1>Task Name</h1>
-                                    <p>12.00 PM - 1.00 PM</p>
-                                </div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
                             </div>
-                            <div class="task">
-                                <div class="strip"></div>
-                                <div class="content">
-                                    <h1>Task Name</h1>
-                                    <p>12.00 PM - 1.00 PM</p>
-                                </div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
                             </div>
-                            <div class="task">
-                                <div class="strip"></div>
-                                <div class="content">
-                                    <h1>Task Name</h1>
-                                    <p>12.00 PM - 1.00 PM</p>
-                                </div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
                             </div>
-                            <div class="task">
-                                <div class="strip"></div>
-                                <div class="content">
-                                    <h1>Task Name</h1>
-                                    <p>12.00 PM - 1.00 PM</p>
-                                </div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
                             </div>
-                            <div class="task">
-                                <div class="strip"></div>
-                                <div class="content">
-                                    <h1>Task Name</h1>
-                                    <p>12.00 PM - 1.00 PM</p>
-                                </div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
                             </div>
-                            <div class="task">
-                                <div class="strip"></div>
-                                <div class="content">
-                                    <h1>Task Name</h1>
-                                    <p>12.00 PM - 1.00 PM</p>
-                                </div>
+                        </div>
+                        <div class="task">
+                            <div class="strip"></div>
+                            <div class="content">
+                                <h1>Task Name</h1>
+                                <p>12.00 PM - 1.00 PM</p>
                             </div>
                         </div>
                     </div>

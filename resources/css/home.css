@@ -47,9 +47,8 @@
         bg-white
         rounded-[30px]
         shadow-[0_3px_5px_0_rgba(0,0,0,0.1)]
-        translate-z-0
-        transition-all duration-500 ease-in-out
-        outline-none;
+        translate-z-0 outline-none
+        transition-all duration-500 ease-in-out;
 }
 
 .dashboard header .search input::placeholder {
@@ -124,13 +123,13 @@
 
 .dashboard .brief .brief-box i {
     @apply
-        text-[2.4rem] leading-1 text-[#fff]
+        text-[3rem] leading-1 text-[#fff]
         transition-all ease-in-out duration-500;
 }
 
 .dashboard .brief .brief-box p {
     @apply
-        text-[3rem] leading-10 font-[500] text-[#fff]
+        text-[4.5rem] leading-10 font-[500] text-[#fff]
         transition-all ease-in-out duration-500;
 }
 
@@ -143,7 +142,8 @@
 .dashboard .brief2 {
     @apply
         flex items-center justify-between gap-5
-        h-[calc(100%-38.2%)];
+        h-[calc(100%-38%)]
+        transition-all duration-500 ease-in-out;
 }
 
 .dashboard .today {
@@ -171,7 +171,8 @@
     @apply
         flex items-center justify-center
         text-[1.3rem]
-        text-[var(--dark-gray)] rounded-full;
+        text-[var(--dark-gray)] rounded-full
+        transition-all duration-500 ease-in-out;
 }
 
 .today .top a i {
@@ -202,7 +203,8 @@
 
 .today .task-container .task .content {
     @apply
-        flex flex-col justify-center items-start h-fit;
+        flex flex-col justify-center items-start h-fit
+        transition-all duration-500 ease-in-out;
 }
 
 .today .task-container .task .strip {
@@ -213,11 +215,15 @@
 }
 
 .today .task-container .task h1 {
-    @apply text-[1.3rem] leading-[1.6rem] font-[600];
+    @apply
+        text-[1.3rem] leading-[1.6rem] font-[600]
+        transition-all duration-500 ease-in-out;
 }
 
 .today .task-container .task p {
-    @apply text-[0.8rem] font-[500] pt-1;
+    @apply
+        text-[0.8rem] font-[500] pt-1
+        transition-all duration-500 ease-in-out;
 }
 
 .upcoming {
@@ -255,7 +261,7 @@
 
 .upcoming .task-container {
     @apply
-        h-full w-full flex flex-col gap-5 overflow-y-auto
+        h-full w-full flex flex-col gap-5 overflow-y-scroll
         transition-all ease-in-out duration-500;
 }
 

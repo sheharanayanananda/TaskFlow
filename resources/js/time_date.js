@@ -35,9 +35,7 @@ updateClock(); // Initial call
 
 // CALENDAR FUNCTION
 function updateCalendar() {
-    const today = new Date(); // Use a local variable for today
-    let currentDate = new Date(today.getFullYear(), today.getMonth(), 1); // Reset to the first day
-
+    const today = new Date();
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth();
 
@@ -79,6 +77,7 @@ function updateCalendar() {
     calendarDays.innerHTML = days.join('');
 }
 
+let currentDate = new Date();
 // Ensure event listeners are only added if elements exist
 document.addEventListener("DOMContentLoaded", function () {
     updateCalendar();

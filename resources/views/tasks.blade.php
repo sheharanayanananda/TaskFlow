@@ -26,7 +26,7 @@
         <div class="tabs">
             <a href="{{ url('/home') }}"><i class="fi fi-rr-house-blank"></i>Home</a>
             <a href="{{ url('/tasks') }}"><i class="fi fi-rr-notes"></i>My Tasks</a>
-            <a href=""><i class="fi fi-rr-calendar-clock"></i>Schedule</a>
+            <!--a href=""><i class="fi fi-rr-calendar-clock"></i>Schedule</a-->
             <a href=""><i class="fi fi-rr-settings"></i>Settings</a>
         </div>
 
@@ -37,7 +37,7 @@
                 <h2>Username</h2>
                 <p>username@gmail.com</p>
             </div>
-            <a href="" class="logout"><i class="fi fi-rr-exit"></i></a>
+            <a href="{{ url('/') }}" class="logout"><i class="fi fi-rr-exit"></i></a>
         </div>
     </nav>
 
@@ -100,6 +100,22 @@
                 </div>
                 @endforeach
             </div>
+        </div>
+        <div class="all-tasks">
+            <div class="header">
+                <h1>All Tasks</h1>
+                <div class="selector">
+                    <!--select>
+                        <option value="" disabled selected>Organize</option>
+                        <option value="">A - Z</option>
+                        <option value="">Z - A</option>
+                        <option value="">Time</option>
+                        <option value="">Priority</option>
+                    <select>
+                    <i-- class="fi fi-br-bars-staggered"></i-->
+                </div>
+            </div>
+
         </div>
     </section>
 </body>
