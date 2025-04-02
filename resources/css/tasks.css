@@ -120,13 +120,20 @@
         transition-all ease-in-out duration-500;
 }
 
+.tasks .boxes {
+    @apply
+        h-[calc(100%-9.5%)] w-full
+        flex gap-5
+        transition-all ease-in-out duration-500;
+}
+
 .tasks .today {
     @apply
         h-full w-1/4
         flex flex-col gap-5
         transition-all ease-in-out duration-500
-        rounded-[30px] overflow-hidden
-        shadow-[0_5px_15px_0_rgba(0,0,0,0.10)]
+        rounded-[30px]
+        shadow-[0_5px_15px_0_rgba(0,0,0,0.20)]
         mt-[90px] p-8  bg-white;
 }
 
@@ -276,6 +283,166 @@
 }
 
 .tasks .task-container .task .popup ul li .delete i {
+    @apply
+        text-[1rem] pt-0.5;
+}
+
+.tasks .boxes .all-tasks {
+    @apply
+        h-full w-3/4
+        flex flex-col gap-5
+        transition-all ease-in-out duration-500
+        rounded-[30px]
+        shadow-[0_5px_15px_0_rgba(0,0,0,0.20)]
+        mt-[90px] p-8  bg-white;
+}
+
+.tasks .all-tasks .header {
+    @apply
+        flex items-center justify-between pb-1
+        transition-all ease-in-out duration-500;
+}
+
+.tasks .all-tasks .header h1 {
+    @apply
+        text-[1.5rem] font-[600]
+        transition-all ease-in-out duration-500;
+}
+
+.tasks .all-tasks .header .selector {
+    @apply
+        flex justify-center items-center gap-2
+        text-[1rem] border border-gray-200 rounded-full
+        cursor-pointer hover:border-gray-300 focus:outline-none;
+}
+
+.tasks .all-tasks .header select {
+    @apply
+        appearance-none h-full w-full text-[0.9rem]
+        py-2 pl-3
+        cursor-pointer focus:outline-none;
+}
+
+.tasks .all-tasks .header .selector i {
+    @apply
+        text-[0.9rem] pt-1.5 pr-3;
+}
+
+.tasks .all-tasks .task-container {
+    @apply
+        flex flex-col gap-3
+        overflow-y-scroll;
+}
+
+.all-tasks .task-container::-webkit-scrollbar {
+    @apply hidden;
+}
+
+.all-tasks .task-container .task {
+    @apply
+        flex justify-between relative
+        h-fit w-full gap-2.5
+        p-5 rounded-[15px]
+        border-[1px] border-[var(--hover)]
+        shadow-[0_3px_5px_0_rgba(0,0,0,0.10)]
+        transition-all ease-in-out duration-500;
+}
+
+.all-tasks .task-container .task .left {
+    @apply
+        flex gap-5 justify-between;
+}
+
+.all-tasks .task-container .task .top {
+    @apply
+        flex flex-col justify-center items-start;
+}
+
+.all-tasks .task-container .task .strip {
+    @apply
+        flex h-full w-[8px] bg-green-500
+        rounded-full
+        transition-all ease-in-out duration-500;
+}
+
+.all-tasks .task-container .task h1 {
+    @apply text-[1.3rem] leading-[1.6rem] font-[600];
+}
+
+.all-tasks .task-container .task p {
+    @apply text-[0.8rem] font-[500] pt-2;
+}
+
+.all-tasks .task-container .task .pop {
+    @apply text-[1.1rem] font-[500] pt-1.5;
+}
+
+.all-tasks .task-container .task .popup {
+    @apply
+        hidden absolute right-[-50px] bg-white p-1 h-fit
+        border-[1px] border-[var(--hover)] rounded-[15px]
+        shadow-[0_5px_20px_0_rgba(0,0,0,0.20)]
+        transition-all ease-in-out duration-500;
+}
+
+.all-tasks .task-container .task .popup.active {
+    @apply
+        flex;
+    animation: popup 0.3s ease-in-out forwards;
+}
+
+@keyframes popup {
+    0% {
+        opacity: 0;
+        transform: scale(80%);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(105%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}
+
+.all-tasks .task-container .task .popup ul {
+    @apply
+        w-full h-fit flex flex-col gap-0
+        transition-all ease-in-out duration-500;
+}
+
+.all-tasks .task-container .task .popup ul li a {
+    @apply
+        w-full h-fit flex gap-3 justify-start pt-3
+        text-[1rem] py-2 px-4 border-[var(--hover)] rounded-[11px]
+        transition-all ease-in-out duration-500;
+}
+
+.all-tasks .task-container .task .popup ul li a:hover {
+    @apply
+        bg-gray-200;
+}
+
+.all-tasks .task-container .task .popup ul li a i {
+    @apply
+        text-[1rem] pt-0.5;
+}
+
+.all-tasks .task-container .task .popup ul li .delete {
+    @apply
+        w-full h-fit flex gap-3 justify-start pt-3
+        text-[1rem] py-2 px-4 border-[var(--hover)] rounded-[11px]
+        transition-all ease-in-out duration-500;
+}
+
+.all-tasks .task-container .task .popup ul li .delete:hover {
+    @apply
+        bg-gray-200;
+}
+
+.all-tasks .task-container .task .popup ul li .delete i {
     @apply
         text-[1rem] pt-0.5;
 }
