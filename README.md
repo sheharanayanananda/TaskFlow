@@ -4,7 +4,9 @@ Here's the updated README with the **Apache License** and a link to the LICENSE 
 
 # TaskFlow  
 
-TaskFlow is a **modern Task Management Web Application** designed to help users **efficiently plan, track, and organize** their tasks with ease. Whether managing personal tasks, work assignments, or large projects, TaskFlow provides a structured and **intuitive interface** to improve productivity.  
+TaskFlow is a **modern Task Management Web Application** designed to help users **efficiently plan, track, and organize** their tasks with ease. Whether managing personal tasks, work assignments, or large projects, TaskFlow provides a structured and **intuitive interface** to improve productivity. 
+
+## ⭕ Development of this project has been temporarily postponed. ⭕
 
 ### **Why TaskFlow?**  
 Built using **Laravel, Vite, and Tailwind CSS**, TaskFlow offers a smooth user experience with **real-time updates, task categorization, scheduling, and priority management**. It ensures users can stay on top of their tasks with a visually appealing dashboard and smart filtering options.  
