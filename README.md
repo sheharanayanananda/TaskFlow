@@ -22,7 +22,7 @@ Built using **Laravel, Vite, and Tailwind CSS**, TaskFlow offers a smooth user e
 TaskFlow is currently **in active development**, with new features and refinements being added regularly to enhance functionality and user experience.  
 
 ## License 📜  
-This project is open-source and licensed under the **Apache License 2.0**. See the full license details in the [LICENSE](LICENSE) file.  
+This project is open-source and licensed under the **Apache License 2.0**. See the full license details in the [LICENSE](LICENSE.md) file.  
 
 ## Author 💡  
 Developed by **Thineth Shehara Nayanananda**.  
